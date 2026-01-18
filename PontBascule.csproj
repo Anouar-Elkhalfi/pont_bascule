@@ -17,6 +17,19 @@
     <PackageReference Include="System.IO.Ports" Version="8.0.0" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.0" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    
+    <!-- Impression & PDF -->
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+    <PackageReference Include="QuestPDF" Version="2023.12.0" />
+    
+    <!-- SAP .NET Connector - À installer manuellement depuis SAP -->
+    <!-- Décommenter après installation de NCo -->
+    <!-- <Reference Include="sapnco">
+      <HintPath>C:\Program Files\SAP\SAP_DotNetConnector3_Net40_x64\sapnco.dll</HintPath>
+    </Reference>
+    <Reference Include="sapnco_utils">
+      <HintPath>C:\Program Files\SAP\SAP_DotNetConnector3_Net40_x64\sapnco_utils.dll</HintPath>
+    </Reference> -->
   </ItemGroup>
 
   <ItemGroup>

@@ -174,10 +174,27 @@ namespace PontBascule.ViewModels
         }
 
         [RelayCommand]
-        private void PrintTicket()
+        private async Task PrintTicket()
         {
-            // TODO: Implémenter l'impression de ticket
-            StatusMessage = "🖨️ Impression du ticket... (À implémenter)";
+            if (WeighingHistory.Count == 0)
+            {
+                StatusMessage = "⚠️ Aucune pesée à imprimer";
+                return;
+            }
+
+            try
+            {
+                var latestWeighing = WeighingHistory[0];
+                
+                // Si vous avez ajouté IPrintService dans le constructeur
+                // await _printService.PrintTicketAsync(latestWeighing);
+                
+                StatusMessage = $"✓ Ticket imprimé pour {latestWeighing.TruckNumber}";
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = $"❌ Erreur impression: {ex.Message}";
+            }
         }
 
         [RelayCommand]
