@@ -1,0 +1,31 @@
+<Application x:Class="PontBascule.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="Views/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Ajoutez ici vos dictionnaires de ressources -->
+            </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Couleurs principales -->
+            <SolidColorBrush x:Key="PrimaryColor" Color="#2196F3"/>
+            <SolidColorBrush x:Key="AccentColor" Color="#FF9800"/>
+            <SolidColorBrush x:Key="BackgroundColor" Color="#F5F5F5"/>
+            
+            <!-- Styles globaux -->
+            <Style TargetType="Button">
+                <Setter Property="Padding" Value="15,8"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Cursor" Value="Hand"/>
+            </Style>
+            
+            <Style TargetType="TextBox">
+                <Setter Property="Padding" Value="8"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
